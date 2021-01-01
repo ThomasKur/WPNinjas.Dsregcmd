@@ -32,7 +32,35 @@ public class UserResult
 ```
 
 ## Nuget package for .NET projects
+The package is available on [Nuget](https://www.nuget.org/packages/WPNinjas.Dsregcmd/1.0.0). Simply install it by searching for 'WPNinjas.Dsregcmd'. You can the retrieve the dsregcmd data by using:
 
+```c#
+
+using System;
+using WPNinjas.Dsregcmd;
+
+namespace WPNinjas.Dsregcmd.ConsoleTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                DsregcmdResult dsreg = Dsregcmd.GetInfo();
+                Console.WriteLine("Successfully retrieved information.");
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Error occured.");
+                Console.WriteLine(ex.Message);
+
+            }
+
+        }
+    }
+}
+
+```
 
 ## PowerShell Module
 
