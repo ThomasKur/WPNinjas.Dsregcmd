@@ -1,5 +1,5 @@
 ﻿$ModulePath = ".\WPNinjas.Dsregcmd"
-$Icon = "https://github.com/ThomasKur/IntuneDocumentation/raw/master/Logo/IntuneDocumentationLogo.png"
+$Icon = "https://raw.githubusercontent.com/ThomasKur/WPNinjas.Dsregcmd/main/WPNinjasLogoBig.png"
 $License = "https://github.com/ThomasKur/WPNinjas.Dsregcmd/blob/main/LICENSE"
 #region UI 
 $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes","Description."
@@ -51,7 +51,6 @@ switch ($result) {
         Update-ModuleManifest -Path "$ModulePath\WPNinjas.Dsregcmd.psd1" `
             -FunctionsToExport $ExportableFunctions `
             -ReleaseNotes $ReleaseNote `
-            -RequiredModules @() `
             -IconUri $Icon `
             -ModuleVersion $SuggestedNewVersion
     }
@@ -60,7 +59,6 @@ switch ($result) {
         Update-ModuleManifest -Path "$ModulePath\WPNinjas.Dsregcmd.psd1" `
             -FunctionsToExport $ExportableFunctions `
             -ReleaseNotes $ReleaseNote `
-            -RequiredModules @() `
             -IconUri $Icon `
             -ModuleVersion $CurrentVersion
     }

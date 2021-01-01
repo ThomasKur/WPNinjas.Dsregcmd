@@ -51,10 +51,10 @@ PowerShellVersion = '5.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @()
+# RequiredModules = @()
 
 # Assemblies that must be loaded prior to importing this module
-RequiredAssemblies = @('WPNinjas.Dsregcmd.dll')
+RequiredAssemblies = 'WPNinjas.Dsregcmd.dll'
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.
 # ScriptsToProcess = @()
@@ -104,10 +104,16 @@ PrivateData = @{
         ProjectUri = 'https://github.com/ThomasKur/WPNinjas.Dsregcmd/'
 
         # A URL to an icon representing this module.
-        IconUri = 'https://github.com/ThomasKur/IntuneDocumentation/raw/master/Logo/IntuneDocumentationLogo.png'
+        IconUri = 'https://raw.githubusercontent.com/ThomasKur/WPNinjas.Dsregcmd/main/WPNinjasLogoBig.png'
 
         # ReleaseNotes of this module
-        ReleaseNotes = ''
+        ReleaseNotes = ' 1.0.0 - 01.01.2021 - Thomas Kurth
+
+- Initial Version
+- Support returning AzureAD Join information
+
+
+ To see the complete history, checkout the Release Notes on Github'
 
         # Prerelease string of this module
         # Prerelease = ''
