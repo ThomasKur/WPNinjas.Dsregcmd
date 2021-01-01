@@ -1,7 +1,7 @@
 # WPNinjas Dsregcmd and Azure AD Join information
-This repo provides options to use dsregcmd information in managed code and powershell not by parsing the dsregcmd.exe commandline output. Therefore, direct calls to netapi32 will be used.
 
-I personally developed these helper library because I need often information like Azure AD Device ID when workjing localy on a device, but I'm not happy with parsing the registry or the command line output from dsregcmd. With this small library you get the possibility to get all this information in managed code like .NETc# or PowerShell as a simple object in the following structure: 
+
+I personally developed these helper library because I need often information like Azure AD Device ID when working localy on a device. But I'm was never happy with parsing the registry or the command line output from dsregcmd. With this small library you get the possibility to get all this information directly from netapi32 in managed code like .NET or PowerShell as a simple object in the following structure: 
 
 ```C#
 public class DsregcmdResult
@@ -32,6 +32,7 @@ public class UserResult
 ```
 
 ## Nuget package for .NET projects
+
 
 ## PowerShell Module
 
