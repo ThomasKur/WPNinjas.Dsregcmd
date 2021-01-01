@@ -9,7 +9,7 @@
     <Product>WPNinjas Dsregcmd</Product>
     <PackageProjectUrl>https://github.com/ThomasKur/WPNinjas.Dsregcmd</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ThomasKur/WPNinjas.Dsregcmd</RepositoryUrl>
-    <PackageTags>AzureAD, Dsregcmd</PackageTags>
+    <PackageTags>AzureAD, Dsregcmd, Windows</PackageTags>
     <RepositoryType>Github</RepositoryType>
     <PackageReleaseNotes>1.0.0 - Initial Version
 - Basic functionality to retrieve the information from dsregcmd.</PackageReleaseNotes>
