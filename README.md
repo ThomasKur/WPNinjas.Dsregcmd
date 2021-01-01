@@ -36,4 +36,13 @@ public class UserResult
 
 ## PowerShell Module
 
+```powershell
+Install-Module -Name WPNinjas.Dsregcmd
+
+# Request information
+$result = Get-Dsregcmd 
+
+# Output information to console
+$result | Format-List *
+```
 
