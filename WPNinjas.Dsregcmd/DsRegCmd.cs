@@ -55,13 +55,7 @@ namespace WPNinjas.Dsregcmd
 
                 Guid.TryParse(userInfo.UserKeyId, out Guid uid);
                 uresult.UserKeyId = uid;
-                try
-                {
-                    Marshal.Release(ptrUserInfo);
-                } catch 
-                {
 
-                }
 
                 X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
 

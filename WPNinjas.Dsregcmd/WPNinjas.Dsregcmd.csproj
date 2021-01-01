@@ -3,7 +3,18 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Thomas Kurth</Authors>
+    <Company>WPNinjas</Company>
+    <Product>WPNinjas Dsregcmd</Product>
+    <PackageProjectUrl>https://github.com/ThomasKur/WPNinjas.Dsregcmd</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ThomasKur/WPNinjas.Dsregcmd</RepositoryUrl>
+    <PackageTags>AzureAD, Dsregcmd</PackageTags>
+    <RepositoryType>Github</RepositoryType>
+    <PackageLicenseUrl>https://github.com/ThomasKur/WPNinjas.Dsregcmd/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes>1.0.0 - Intial Version
+- Basic functionality to retrieve the information from dsregcmd.</PackageReleaseNotes>
+    <Description>I developed this helper library because I need often information like Azure AD Device ID when working localy on a device. But I was never happy with parsing the registry or the command line output from dsregcmd. With this small library you get the possibility to get all this information directly from netapi32 in managed code like .NET or PowerShell as a simple object.</Description>
   </PropertyGroup>
 
 </Project>

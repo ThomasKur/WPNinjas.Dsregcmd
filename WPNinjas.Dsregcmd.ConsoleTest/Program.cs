@@ -9,12 +9,15 @@ namespace WPNinjas.Dsregcmd.ConsoleTest
         {
             try
             {
-                Dsregcmd.GetInfo();
+                var dsreg = Dsregcmd.GetInfo();
+                Console.WriteLine("Successfully retrieved information.");
             } catch (Exception ex)
             {
                 Console.WriteLine("Error occured.");
                 Console.WriteLine(ex.Message);
+
             }
+
         }
     }
 }
