@@ -63,6 +63,7 @@ namespace WPNinjas.Dsregcmd.ConsoleTest
 ```
 
 ## PowerShell Module
+For your convinience the module is published to the [Powershell Gallery](https://www.powershellgallery.com/packages/WPNinjas.Dsregcmd/).
 
 ```powershell
 Install-Module -Name WPNinjas.Dsregcmd
