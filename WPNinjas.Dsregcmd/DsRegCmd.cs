@@ -55,10 +55,6 @@ namespace WPNinjas.Dsregcmd
                 Guid.TryParse(userInfo.UserKeyId, out Guid uid);
                 uresult.UserKeyId = uid;
 
-                CERT_CONTEXT cerContext = Marshal.PtrToStructure<CERT_CONTEXT>(joinInfo.pJoinCertificate);
-
-                CERT_INFO cerInfo = Marshal.PtrToStructure<CERT_INFO>(cerContext.pCertInfo);
-
                 X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
 
                 store.Open(OpenFlags.ReadOnly);
