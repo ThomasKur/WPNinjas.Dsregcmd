@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using static WPNinjas.Dsregcmd.InternalData;
 
 namespace WPNinjas.Dsregcmd
@@ -38,7 +37,7 @@ namespace WPNinjas.Dsregcmd
 
                 result.IdpDomain = joinInfo.IdpDomain;
                 result.JoinUserEmail = joinInfo.JoinUserEmail;
-                result.MdmComplianceUrl = joinInfo.JoinUserEmail;
+                result.MdmComplianceUrl = joinInfo.MdmComplianceUrl;
                 result.MdmEnrollmentUrl = joinInfo.MdmEnrollmentUrl;
                 result.MdmTermsOfUseUrl = joinInfo.MdmTermsOfUseUrl;
                 result.TenantDisplayName = joinInfo.TenantDisplayName;
@@ -75,14 +74,11 @@ namespace WPNinjas.Dsregcmd
                 }
                 result.CertInfo = cresult;
 
-
-                
                 return result;
             }
             Marshal.Release(ptrJoinInfo);
 
             return new DsregcmdResult() { JoinType = JoinType.DSREG_NO_JOIN };
         }
-
     }
 }
