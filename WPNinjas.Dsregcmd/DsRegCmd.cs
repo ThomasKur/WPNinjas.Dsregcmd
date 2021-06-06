@@ -46,14 +46,23 @@ namespace WPNinjas.Dsregcmd
                 result.UserSettingSyncUrl = System.Text.ASCIIEncoding.ASCII.GetString(data);
 
                 // Userinfo
-                UserResult uresult = new UserResult();
-                var ptrUserInfo = joinInfo.pUserInfo;
-                var userInfo = Marshal.PtrToStructure<DSREG_USER_INFO>(ptrUserInfo);
-                uresult.UserEmail = userInfo.UserEmail;
-                uresult.UserKeyname = userInfo.UserKeyName;
+                try
+                {
+                    UserResult uresult = new UserResult();
+                    var ptrUserInfo = joinInfo.pUserInfo;
+                    if (ptrUserInfo != IntPtr.Zero)
+                    {
+                        var userInfo = Marshal.PtrToStructure<DSREG_USER_INFO>(ptrUserInfo);
+                        uresult.UserEmail = userInfo.UserEmail;
+                        uresult.UserKeyname = userInfo.UserKeyName;
 
-                Guid.TryParse(userInfo.UserKeyId, out Guid uid);
-                uresult.UserKeyId = uid;
+                        Guid.TryParse(userInfo.UserKeyId, out Guid uid);
+                        uresult.UserKeyId = uid;
+                    }
+                } catch
+                {
+
+                }
 
                 X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
 
