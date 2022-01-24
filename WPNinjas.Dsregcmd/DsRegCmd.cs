@@ -26,7 +26,7 @@ namespace WPNinjas.Dsregcmd
             {
 
                 var joinInfo = Marshal.PtrToStructure<DSREG_JOIN_INFO>(ptrJoinInfo);
-                
+
                 result.JoinType = (JoinType)joinInfo.joinType;
 
                 Guid.TryParse(joinInfo.DeviceId, out Guid did);
@@ -59,7 +59,8 @@ namespace WPNinjas.Dsregcmd
                         Guid.TryParse(userInfo.UserKeyId, out Guid uid);
                         uresult.UserKeyId = uid;
                     }
-                } catch
+                }
+                catch
                 {
 
                 }
@@ -81,7 +82,12 @@ namespace WPNinjas.Dsregcmd
 
                 return result;
             }
-            Marshal.Release(ptrJoinInfo);
+            try { 
+                Marshal.Release(ptrJoinInfo);
+            } catch
+            {
+
+            }
 
             return new DsregcmdResult() { JoinType = JoinType.DSREG_NO_JOIN };
         }
