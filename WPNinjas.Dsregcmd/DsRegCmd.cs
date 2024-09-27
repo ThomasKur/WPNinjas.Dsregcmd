@@ -42,8 +42,11 @@ namespace WPNinjas.Dsregcmd
                 result.MdmTermsOfUseUrl = joinInfo.MdmTermsOfUseUrl;
                 result.TenantDisplayName = joinInfo.TenantDisplayName;
 
-                byte[] data = System.Convert.FromBase64String(joinInfo.UserSettingSyncUrl);
-                result.UserSettingSyncUrl = System.Text.ASCIIEncoding.ASCII.GetString(data);
+                if (joinInfo.UserSettingSyncUrl != null)
+                {
+                    byte[] data = System.Convert.FromBase64String(joinInfo.UserSettingSyncUrl);
+                    result.UserSettingSyncUrl = System.Text.ASCIIEncoding.ASCII.GetString(data);
+                }
 
                 // Userinfo
                 try
